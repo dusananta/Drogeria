@@ -1,0 +1,304 @@
+/* 
+All-COLOR:
+Red: D10F02
+
+*/
+/*GLOBAL*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(241, 235, 235, 0.637);
+}
+
+/*INFO-DIV*/
+.info-div {
+  background-color: #f0e000;
+  color: #fff;
+}
+.info-div span {
+  color: #fff;
+
+  font-size: 0.9rem;
+}
+.info-div .right i {
+  padding-right: 1rem;
+}
+.info-div {
+  padding: 0.3rem;
+}
+/*NAVBAR*/
+.logo {
+  width: 50px;
+  height: 30px;
+}
+
+.navigation {
+  background-color: #fff;
+  box-shadow: 0 0 20px rgb(207, 207, 207);
+  padding: 0.3rem, 0;
+}
+
+/*HEADER*/
+.header-galery {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+}
+.header-galery img {
+  height: 60vh;
+}
+.header-galery .container {
+  position: relative;
+
+  color: #f0e000;
+}
+.header-galery .container h1 {
+  font-family: Brush Script MT;
+}
+.header-galery .content {
+  padding-top: 30vh;
+  padding-left: 33%;
+}
+.content span {
+  color: rgb(0, 52, 224);
+  font-size: 3rem;
+  padding-left: 10px;
+  font-family: Brush Script MT;
+}
+.header-galery #carouselExampleSlidesOnly {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(20, 1, 1);
+}
+
+/*HEADER-IMG*/
+.firstDiv {
+  box-shadow: 0 0 10px rgb(90, 87, 87);
+  margin-top: 20px;
+  height: 250px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: grey;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.firstDiv:hover {
+  background-color: #f0e000;
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+.firstDiv img {
+  width: 100%;
+  height: 75%;
+}
+.firstDiv button {
+  margin-top: 20px;
+}
+.firstDiv button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*HEADER-ICON*/
+
+.drugiRed {
+  margin-top: 20px;
+  display: flex;
+}
+.drugiRed .firstDiv i {
+  font-size: 3rem;
+}
+
+/*BACKGROUND-Z INDEX*/
+.bgBlackImg {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-image: url("../img/blackImg.jpg");
+  height: 70vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.bgBlackImg .colored-text {
+  color: rgb(0, 52, 224);
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
+.black-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.712);
+  z-index: 0;
+}
+.bgBlackImg .content {
+  position: relative;
+  z-index: 15;
+}
+.bgBlackImg h1 {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3rem;
+  color: rgb(255, 239, 239);
+}
+.bgBlackImg p {
+  color: rgba(255, 239, 239, 0.719);
+}
+.bgBlackImg .pogledajte-video {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.3rem;
+  color: rgba(255, 239, 239, 0.699);
+  margin: 0;
+  padding: 0;
+}
+.bgBlackImg .bg-black-img-i {
+  text-decoration: none;
+  font-size: 2.3rem;
+  text-align: center;
+}
+.bgBlackImg .btn-primary {
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+  margin-right: 15px;
+}
+
+/*HEADER-ICON-6*/
+.header-6 {
+  width: 100%;
+  height: 70vh;
+}
+.left_6 .gornji {
+  width: 100%;
+  height: 40%;
+  margin-bottom: 5%;
+  background-image: url("../img/verona.jpeg");
+  background-position: center;
+  box-shadow: 0 0 10px rgba(20, 1, 1, 0.404);
+  transition: all 0.5s;
+  border-radius: 5px;
+}
+.left_6 .gornji:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+.left_6 .donji {
+  box-shadow: 0 0 10px rgba(20, 1, 1, 0.404);
+  width: 100%;
+  height: 58%;
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+.left_6 .donji i {
+  font-size: 2rem;
+  color: rgb(0, 52, 224);
+  text-align: center;
+}
+.center {
+  width: 100%;
+  height: 70vh;
+  background-image: url("../img/katalog.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.crnaPozadina {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.425);
+  position: absolute;
+  z-index: 0;
+}
+.center h3 {
+  transform: rotate(40deg);
+  margin-left: 10%;
+  font-size: 3rem;
+  position: relative;
+  z-index: 10;
+  color: rgb(252, 213, 213);
+}
+.right_6 .glavni {
+  box-shadow: 0 0 10px rgba(112, 106, 106, 0.774);
+  width: 100%;
+  height: 100%;
+  margin-bottom: 5%;
+  padding: 5px 0 0 5px;
+}
+.rightSlicicaGore i {
+  box-shadow: 0 0 10px rgba(112, 106, 106, 0.774);
+  padding: 15px;
+
+  border-radius: 50px;
+  font-size: 2rem;
+  color: rgb(0, 52, 224);
+}
+
+/*SUBSCRIBE*/
+.form-control {
+  width: 400px;
+}
+.subscribe-background {
+  width: 100%;
+  background-color: rgba(219, 218, 218, 0.568);
+  height: 30vh;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 0;
+  padding-top: 2rem;
+}
+/*CARD-SECTION*/
+.card-body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.card-body span,
+del {
+  color: rgb(165, 161, 161);
+  margin-bottom: 0.4rem;
+}
+.card-body .price h2 {
+  color: rgb(0, 52, 224);
+}
+.card-body .price {
+  display: flex;
+  align-items: center;
+}
+.subscribe .card-header {
+  border-bottom: none;
+}
+.subscribe .card-footer {
+  border-top: none;
+}
+.active-header {
+  color: #fff;
+  background-color: rgb(0, 52, 224);
+  font-weight: bold;
+  font-size: 1rem;
+}
+/*FOOTER*/
+
+.footer-icon {
+  font-size: 2rem;
+  color: rgb(0, 52, 224);
+  display: flex;
+}
+.footer-icon i {
+  margin-left: 0.7rem;
+}
+
+footer ul {
+  list-style-position: inside;
+  list-style-type: square;
+}
