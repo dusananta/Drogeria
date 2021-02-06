@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head'); %>
+    <style>
+        .header-img{
+            background-image: url('home_page/img/deterdzenti.jpg');
+            width: 100%;
+            height: 500px;
+            background-position: left top;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            
+        }
+        .detergents .firstDiv i{
+            color: blue;
+            font-size: 1.5rem;
+        }
+        #btn-porudzbina{
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+        }
+    </style>
+    
+<body>
+    <%-include('partials/navbar'); %>
+    <div class="header-img"></div>
+    <div class="detergents">
+    <div class="container">
+   
+        <% if(user_email === 'admin@gmail.com'){%>
+        <a href="novi_proizvod" class="btn btn-primary justify-content-center">Novi Proizvod</a>
+        <%}%>
+       
+                <a href="korpa" class="btn btn-primary justify-content-center">Pregledaj korpu</a>
+    
+        <div class="row">
+            
+            <% proizvodi.forEach(function(proizvod) { %>
+            <div class="col-md-3 mt-3 d-flex">
+                <div class="firstDiv">
+                   
+                    <img src="http://localhost:3000/img/<%= proizvod.img %>"/>
+                    <h5>CENA: <span><%= proizvod.cena %></span></h5>
+                    <form action="/korpa/<%= proizvod.id %>/<%= proizvod.cena %>/<%= proizvod.naziv %>" method="POST">
+                        <button id="btn-porudzbina" type="submit"><i class="fas fa-shopping-cart"></i></button>
+                    </form>
+                     
+                </div>
+           </div>
+           <!--
+           <div class="col-md-3 mt-3">
+            <div class="firstDiv">
+                <img src="img/rubel.jpg" >
+                <h5>CENA: <span>450.00 rsd</span></h5>
+                <a href="sapuni"><i class="fas fa-shopping-cart"></i>i></a>
+            </div>
+       </div>
+       <div class="col-md-3 mt-3">
+        <div class="firstDiv">
+            <img src="img/persil.jpg" >
+            <h5>CENA: <span>2100.00 rsd</span></h5>
+            <a href="sapuni"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+   </div>
+   <div class="col-md-3 mt-3">
+    <div class="firstDiv">
+        <img src="img/merix.png" >
+        <h5>CENA: <span>900.00 rsd</span></h5>
+        <a href="sapuni"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+</div>
+
+<div class="col-md-3 mt-3 mb-5">
+    <div class="firstDiv">
+        <img src="img/perwoll_omeksivac.jpg" >
+        <h5>CENA: <span>530.00 rsd</span></h5>
+        <a href="sapuni"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+</div> 
+<div class="col-md-3 mt-3">
+    <div class="firstDiv">
+        <img src="img/duel_omeksivac.png" >
+        <h5>CENA: <span>300.00 rsd</span></h5>
+        <a href="sapuni"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+</div>
+<div class="col-md-3 mt-3">
+    <div class="firstDiv">
+        <img src="img/bohor_omeksivac.jpg" >
+        <h5>CENA: <span>285.00 rsd</span></h5>
+        <a href="sapuni"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+</div>
+<div class="col-md-3 mt-3">
+    <div class="firstDiv">
+        <img src="img/ornel_omeksivac.png" >
+        <h5>CENA: <span>320.00 rsd</span></h5>
+        <a href="sapuni"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+</div>
+-->
+<% }); %>
+        </div>
+        
+    </div>
+    </div>
+    <%-include('partials/footer')%>
+</body>
+</html>

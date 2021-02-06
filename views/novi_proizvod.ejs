@@ -1,0 +1,28 @@
+<%- include('partials/head'); %>
+<%- include('partials/navbar'); %>
+<div class="container d-flex justify-content-center mt-5">
+<form method="POST" action="novi_proizvod">
+    <h3 class="mb-3 mt-3 text-center">Novi Proizvod</h3>
+
+    <div class="mb-3">
+        <label for="exampleInputIme"> Naziv </label>
+        <input type="text" class="form-control" id="exampleInputIme" aria-describedby="emailHelp" name="naziv">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputPrezime"> Cena </label>
+        <input type="text" class="form-control" id="exampleInputPrezime" aria-describedby="emailHelp" name="cena">
+      </div>
+
+      <div class="mb-3">
+        <label for="exampleInputBrojTelefona"> Sifra </label>
+        <input type="text" class="form-control" id="exampleInputBrojTelefona" aria-describedby="emailHelp" name="sifra">
+      </div>
+      <label for="img">Select image:</label><br>
+      <input type="file" id="img" name="img" accept="image/*">
+    
+    <section class="d-flex justify-content-center">
+    <button type="submit" class="btn btn-primary mt-3">Dodaj proizvod</button>
+    </section>
+</form>
+  </div>

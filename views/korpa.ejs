@@ -1,0 +1,43 @@
+<%-include('partials/head')%>
+<%-include('partials/navbar')%>
+    <div class="container mt-5">
+    <table class="table">
+        <thead>
+          <tr>
+            
+            <th scope="col">Korsnik_id</th>
+            <th scope="col">Proizvod_id</th>
+            <th scope="col">Naziv_proizvoda</th>
+            <th scope="col">Cena_proizvoda(din)</th>
+
+          </tr>
+        </thead>
+        <% korpa.forEach(function(kor) { %>
+        <tbody>
+          <tr>
+            
+            <td><%=kor.korisnik_id%></td>
+            <td><%=kor.proizvod_id%></td>
+            <td><%=kor.naziv_proizvoda%></td>
+            <td><%=kor.ukupna_cena%></td>
+
+          </tr>
+          </tbody>
+          <%})%>
+
+          <!--
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+    -->
+      </table>
+      </div>

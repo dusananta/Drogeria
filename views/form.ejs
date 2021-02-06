@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+	<link rel="stylesheet" type="text/css" href="form/css/style.css">
+	<%- include('partials/head'); %>
+</head>
+<body style="background-color: rgb(135, 135, 55)"> 
+	<div class="wrap">
+		<h1 class="label">User Login</h1>
+		<div class="pozadinaZ"></div>
+		<form class="login_Form" method="POST" name="form" onsubmit="return Validation()" action="/form"> <!--onsubmit="return Validation()"-->
+
+			<div class="font">Email</div>
+			<input autocomplete="off" type="text" name="email">
+			<div id="email_Error">Please fill up your Email</div>
+
+
+			<div class="font font2">Password</div>
+			<input type="password" name="lozinka"><br>
+			<div id="password_Error">Please fill up your Password</div>
+			
+			<div class="novi_korisnik mt-3 text-center"> <a href="novi_korisnik" style="color: black;"> Create account </a></div>
+
+			<button type="submit">Login</button>
+		</form>
+	</div>
+<script type="text/javascript" src="form/js/main.js"></script>
+</body>
+</html>
