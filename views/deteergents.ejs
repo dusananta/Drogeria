@@ -43,7 +43,7 @@
                     <img src="http://localhost:3000/img/<%= proizvod.img %>"/>
                     <h5>CENA: <span><%= proizvod.cena %></span></h5>
                     <div class="d-flex justify-content-center">
-                    <form style="display: flex; justify-content: center;" action="/korpa/<%= proizvod.id %>/<%= proizvod.cena %>/<%= proizvod.naziv %>" method="POST" 
+                    <form style="display: flex; justify-content: center;" action="/korpa/<%= proizvod.id %>/<%= proizvod.cena %>/<%= proizvod.naziv %>" method="POST">
                         <button id="btn-porudzbina" type="submit"><i class="fas fa-shopping-cart"></i></button>
                     </form>
 
