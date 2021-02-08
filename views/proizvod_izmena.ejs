@@ -1,0 +1,35 @@
+<head>
+    <link rel="stylesheet" href="../home_page/css/bootstrap.min.css">
+    
+</head>
+
+<div class="container d-flex justify-content-center mt-5">
+    <% proizvodi.forEach(function(proizvod){ %>
+    <form method="POST" action="/proizvod_izmena/<%=proizvod.id%>">
+        <h3 class="mb-3 mt-3 text-center">Izmena Proizvod</h3>
+    
+        <div class="mb-3">
+            <label for="exampleInputIme"> Naziv </label>
+            <input type="text" class="form-control" id="exampleInputIme" aria-describedby="emailHelp" name="naziv" value="<%= proizvod.naziv %>">
+          </div>
+    
+          <div class="mb-3">
+            <label for="exampleInputPrezime"> Cena </label>
+            <input type="text" class="form-control" id="exampleInputPrezime" aria-describedby="emailHelp" name="cena" value="<%= proizvod.cena %>">
+          </div>
+    
+          <div class="mb-3">
+            <label for="exampleInputBrojTelefona"> Sifra </label>
+            <input type="text" class="form-control" id="exampleInputBrojTelefona" aria-describedby="emailHelp" name="sifra" value="<%= proizvod.sifra %>">
+          </div>
+          <label for="img">Select image:</label><br>
+          <input type="file" id="img" name="img" accept="image/png, image/jpeg" required>
+       
+        
+        <section class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary mt-3">Promeni proizvod</button>
+        </section>
+    </form>
+    <% }) %>
+      </div>
+      

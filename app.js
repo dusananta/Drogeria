@@ -30,7 +30,8 @@ app.use(
     secret: 'secret',
     resave: true,
     saveUninitialized: true
-    }))
+    })
+    )
 
 
 
@@ -195,9 +196,9 @@ app.get('/logout', (req,res)=>{
     res.redirect('/');
 })
 
-app.get('/proizvodi' , (req,res) => {
+app.get('/proizvod_izmena/:id' , (req,res) => {
     
-    let sql = "SELECT * FROM proizvodi;";
+    let sql = "SELECT * FROM proizvodi WHERE id="+req.params.id;
     con.query(sql, function(err, result) {
         if (err) {
         res.status(500);
@@ -208,7 +209,7 @@ app.get('/proizvodi' , (req,res) => {
         //res.write(row.id + '<br>');
         //})
     
-      res.render('proizvodi', {proizvodi: result})
+      res.render('proizvod_izmena',{proizvodi: result, page_name:'deteergents'})
             
             
         return res.end();
@@ -240,6 +241,19 @@ app.post('/novi_proizvod', (req,res)=>{
      })
 })
 
+app.post('/proizvod_izmena/:id', (req,res)=>{
+    var sql = "UPDATE proizvodi SET naziv=? , cena=? , sifra =? , img=? WHERE id= ?"
+  
+    con.query(sql,[req.body.naziv, req.body.cena,req.body.sifra,req.body.img,req.params.id], (err, result) => {
+        if(err){
+            res.status(500);
+            return res.end(err.message);
+        }   
+        res.status(200);
+        return res.redirect('/deteergents');
+     })
+})
+
 app.get('/korpa' , (req,res) => {
     
     let sql = "SELECT * FROM korpa WHERE korisnik_id=" + req.session.user.id;
@@ -252,8 +266,8 @@ app.get('/korpa' , (req,res) => {
         //result.forEach( function(row) {
         //res.write(row.id + '<br>');
         //})
-     console.log(result)
-      res.render('korpa', {korpa: result, page_name: 'korpa'})
+     
+      res.render('korpa', {korpa: result, page_name: 'korpa', proizvodi:result})
             
             
         return res.end();
@@ -278,6 +292,16 @@ app.post('/korpa/:id/:cena/:naziv', (req,res)=>{
         res.status(200)
         return res.redirect('/deteergents');
     })
+})
+
+app.post('/korpa_brisanje/:id', (req,res)=>{
+    
+    var sql = "DELETE FROM korpa WHERE id=" +req.params.id;
+    con.query(sql,(err,result)=>{
+     if(err) throw err;
+     
+})
+res.redirect('/korpa');
 })
 // listen on port 3000
 app.listen(port, ()=>{

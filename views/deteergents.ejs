@@ -42,10 +42,16 @@
                    
                     <img src="http://localhost:3000/img/<%= proizvod.img %>"/>
                     <h5>CENA: <span><%= proizvod.cena %></span></h5>
-                    <form action="/korpa/<%= proizvod.id %>/<%= proizvod.cena %>/<%= proizvod.naziv %>" method="POST">
+                    <div class="d-flex justify-content-center">
+                    <form style="display: flex; justify-content: center;" action="/korpa/<%= proizvod.id %>/<%= proizvod.cena %>/<%= proizvod.naziv %>" method="POST" 
                         <button id="btn-porudzbina" type="submit"><i class="fas fa-shopping-cart"></i></button>
                     </form>
-                     
+
+        <% if(user_email === 'admin@gmail.com'){%>
+                    
+                    <a href="/proizvod_izmena/<%= proizvod.id %>" style="margin-top: 0; border: none; margin-left: 20px;" id="btn-izmena" type="submit"><i class="fas fa-edit" style="color: lightgreen;"></i></a>
+                <% } %>   
+                </div>
                 </div>
            </div>
            <!--

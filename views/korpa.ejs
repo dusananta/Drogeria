@@ -1,7 +1,7 @@
 <%-include('partials/head')%>
 <%-include('partials/navbar')%>
     <div class="container mt-5">
-    <table class="table">
+    <table class="table" style="text-align: center;">
         <thead>
           <tr>
             
@@ -9,6 +9,7 @@
             <th scope="col">Proizvod_id</th>
             <th scope="col">Naziv_proizvoda</th>
             <th scope="col">Cena_proizvoda(din)</th>
+            <th scope="col">Obrisi_proizvod</th>
 
           </tr>
         </thead>
@@ -20,10 +21,15 @@
             <td><%=kor.proizvod_id%></td>
             <td><%=kor.naziv_proizvoda%></td>
             <td><%=kor.ukupna_cena%></td>
-
+            <form action="/korpa_brisanje/<%= kor.id %>" method="POST">
+              <td><button type="submit"><i class="fas fa-trash-alt" style="color: red; border: none;"></i></button></td>
+              </form>
           </tr>
           </tbody>
           <%})%>
+          
+             
+          
 
           <!--
           <tr>
